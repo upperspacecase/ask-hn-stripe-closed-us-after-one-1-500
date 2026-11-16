@@ -1,0 +1,9 @@
+All three audit fixes are applied, but the project does not type-check: `tsc` reports three errors, all in files I did not touch. ESLint passes on the three edited files; I did not render the page.
+
+- **Fix 1 (`app/page.tsx`):** the H1 is now "Set up Stripe before you bill your first contractor." The incident sentence now opens the subhead.
+- **Fix 2 (`components/SignupForm.tsx`):** the button reads "Email me the setup checklist". The line under it is the audit's "Not live yet…" wording.
+- **Fix 3 (`components/LogoStrip.tsx`):** the brand list, including "Hacker News", is replaced by the three numbered steps. The component name and its import are unchanged, so the layout still has four regions.
+
+The `tsc` errors:
+- **Missing Remotion composition:** `remotion/Demo` does not exist, yet `components/DemoPlayer.tsx` and `remotion/Root.tsx` import it. The demo region will not build until that file exists.
+- **`app/layout.tsx`:** `LayoutProps` is not found.

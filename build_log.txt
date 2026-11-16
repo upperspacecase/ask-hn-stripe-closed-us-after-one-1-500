@@ -1,0 +1,6 @@
+Scaffold and page are in place; writing the Remotion demo composition now, then building.
+API Error: Your computer went to sleep mid-response. The response above may be incomplete.
+
+
+STDERR:
+Warning: this sign-in ends between 2026-11-21 and 2026-11-24 (in 5 days at the earliest). Renewing it does not move those dates. Run claude auth login before then, or use claude setup-token for unattended jobs.

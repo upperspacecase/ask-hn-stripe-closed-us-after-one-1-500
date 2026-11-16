@@ -1,0 +1,30 @@
+SCORE: 6/10
+
+Based on the source of `app/page.tsx`, `SignupForm`, `LogoStrip`, `Footer` and `layout.tsx`. I did not render the page or read the text inside the Remotion demo animation, so on-screen demo copy is not scored.
+
+TOP 3 FIXES:
+
+1. **Put the incident in the headline** (`app/page.tsx:21`). "Set up Stripe before you bill your first contractor" is an instruction any Stripe tutorial could sign, and the one hook nobody else has is buried in the subhead.
+   - Change the h1 to: "One $1,500 charge got a new Stripe account closed. Set yours up before you bill your first contractor."
+   - Then delete the first sentence of the subhead at `:24`, which also cuts it from about 55 words to about 40.
+
+2. **Say what is "not live yet" and use one name for the offer** (`components/SignupForm.tsx:70` and `:33`). The button promises a "setup checklist", the helper line says "Not live yet", and the success state calls it a "setup check". A reader cannot tell whether they are getting a document or joining a waitlist for a tool.
+   - Use "checklist" everywhere.
+   - Change line 70 to: "The checklist is still being written. You get all 3 steps by email the day it is done. No Stripe login, no card, no phone number."
+   - Change "The setup check is not live yet" at line 33 to "The checklist is not finished yet".
+
+3. **Rewrite the three steps in the customer's words and repeat the CTA** (`components/LogoStrip.tsx:2-4`, `app/page.tsx:52`). "SetupIntent" is developer jargon for an agency owner, and the steps are bare labels with no reason attached. The page also ends without a second signup form.
+   - Step 1: "Signed authorization: the contractor agrees in writing to $500 per completed appointment before you save their card."
+   - Step 2: "Itemized invoice: one line per appointment with the date, not one $1,500 lump."
+   - Step 3: "Appointment records: the booking confirmation for each one, ready if Stripe asks."
+   - Add a second `<SignupForm />` after `<LogoStrip />`.
+
+GREEN FLAGS:
+
+- **Specific numbers throughout:** $1,500, 3 appointments, $500 per appointment and "fewer than 5 contractor clients" all match the target customer exactly.
+- **Narrow audience named in the copy:** "pay-per-appointment agencies" would feel odd to anyone outside the group, which is what you want.
+- **Verifiable proof:** the incident links to the HN thread, and the demo is labelled as a simulation with example dates.
+- **Honest limit on the promise:** "Stripe decides which accounts stay open; nobody outside Stripe can promise that" makes the rest more believable.
+- **Benefit CTA with friction removed:** "Email me the setup checklist" rather than "Sign up", plus "No Stripe login, no card, no phone number".
+- **One promise, one action:** a single email field, with no nav links or competing CTAs.
+- **Concrete before/after in the subhead:** "charging a card on file and hoping" versus "a saved-card authorization, an itemized invoice and a paper trail".

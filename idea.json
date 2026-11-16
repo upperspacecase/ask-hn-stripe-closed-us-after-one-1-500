@@ -1,0 +1,99 @@
+{
+  "status": "killed",
+  "killed_at_stage": 4,
+  "kill_reason": "The fix is knowledge, not software, and it already ships free inside the tool the customer uses. Commenters on the thread itself named it: Stripe SetupIntents with off-session usage (didgeoridoo) and plain Stripe Invoicing with a hosted invoice each time (A_D_E_P_T, TZubiri). The $1-then-$1,500 saved-card pattern is a one-time setup mistake, not a recurring workflow gap. Second structural blocker: the post's own title is that Stripe 'never asked for evidence', so a product that packages authorization evidence (recording, messages, client confirmation) cannot change the outcome, because the processor's risk decision is opaque and final. Three or more well-funded alternatives exist (Stripe Invoicing, GoHighLevel invoicing, QuickBooks Payments, PandaDoc/DocuSign authorization forms) and I cannot articulate a differentiator against them. Also noted: several commenters questioned the legitimacy of the business model itself (Hizonner, JDups, alwa), which weakens the customer.",
+  "stage_2": {
+    "customer": "Owner-operators of 1-5 person pay-per-appointment lead-generation agencies that book homeowner appointments for local home-service contractors (roofing, HVAC, remodeling), billing roughly $500 per completed appointment by charging a card on file, with a new Stripe account and fewer than 5 paying clients. The post author is exactly this: first client, $1,500 for 3 appointments.",
+    "where": "r/agency, r/leadgeneration, r/sweatystartup, r/Entrepreneur, GoHighLevel user Facebook groups, Hacker News Ask HN. These are from my own knowledge of where this segment gathers; I did not verify activity levels in this run.",
+    "pays_for": "GoHighLevel CRM (from memory $97-$297/month, not verified in this run), cold-call dialers and call recording, Facebook/Google ad spend, Stripe processing fees. The author mentions only Stripe and a recorded call."
+  },
+  "stage_3": {
+    "real_posts": [
+      "https://news.ycombinator.com/item?id=49433578",
+      "https://news.ycombinator.com/item?id=47081981",
+      "https://news.ycombinator.com/item?id=35287256",
+      "https://news.ycombinator.com/item?id=38784392",
+      "https://news.ycombinator.com/item?id=36970678"
+    ],
+    "urgent": "The author's account is closed, the appeal was rejected the next day, and support called the decision final, so they cannot take card payments at all; the first client is already paying by bank transfer outside Stripe. Related posts show the same blocked state: 47081981 reports Stripe holding about $50K, 35287256 reports closure on a first sale.",
+    "valuable": "$1,500 invoice blocked for the author (collected by bank transfer instead, so not lost). Related posts quantify larger costs: about $50K held (47081981), $85K withheld (47565502), $92K (39642274). Caveat: the closely matching posts are different businesses (DTC ecommerce, SaaS), not lead-gen agencies; only 49433578 ('Stripe closed our account for \"unauthorized payments\"', 3 points, no body text) matches the exact wording, and I found zero other posts from pay-per-appointment agencies. HN Algolia queries tried: 'stripe closed account unauthorized saved card', 'stripe account closed lead generation agency' (0 results), 'stripe banned pay per appointment' (0 results), 'stripe closed account', 'stripe account closed risk', 'stripe shut down account', 'stripe banned business', 'stripe unacceptable level of risk', 'stripe account terminated funds held' (0 results). Reddit was not searched."
+  },
+  "stage_4": {
+    "software": [
+      "Stripe SetupIntents with off-session usage, https://docs.stripe.com/payments/setup-intents : the correct way to save a card for later charges, recommended in the thread; free and inside Stripe, so it is sufficient for a customer who knows it exists. The gap is awareness, not capability.",
+      "Stripe Invoicing, https://stripe.com/invoicing : hosted invoice with a pay link per appointment batch, which is exactly the structure the author asked about; two commenters said it works without issue. Useless only after the account is already closed.",
+      "GoHighLevel invoicing/payments, https://www.gohighlevel.com : the CRM this segment commonly runs on already sends invoices and payment links; it sits on top of a processor, so it does not protect against processor closure either.",
+      "PandaDoc / DocuSign card-authorization forms, https://www.pandadoc.com : produces signed written authorization, which commenter 1123581321 said Stripe stresses; not sufficient because Stripe never asked the author for evidence."
+    ],
+    "workarounds": [
+      "Bank transfer / ACH outside Stripe, which the author's client is already doing.",
+      "Send a manual invoice per batch of completed appointments and have the client pay each one themselves instead of charging a saved card.",
+      "Move to another processor or a high-risk merchant account, as commenter lossolo suggested, and accept higher fees."
+    ],
+    "graveyard": "GitHub repository search returned 0 results for all three queries tried ('stripe mandate authorization evidence', 'card on file authorization consent stripe', 'chargeback evidence generator'), so I found no archived or abandoned repos and cannot state why past attempts died. Three queries is a thin search; the absence is not proof nobody tried. I also tried to confirm whether Stripe's restricted-businesses page lists lead generation and the page text returned no match, so that is unverified."
+  },
+  "stage_5": null,
+  "stage_6": null,
+  "id": "hn_50510042",
+  "title": "Ask HN: Stripe closed us after one $1,500 invoice and never asked for evidence",
+  "url": "https://news.ycombinator.com/item?id=50510042",
+  "source": "hackernews",
+  "score": 163,
+  "num_comments": 70,
+  "app_name": "ask_hn_stripe_closed_us_after_one_1_500",
+  "summary": "Ask HN: Stripe closed us after one $1,500 invoice and never asked for evidence",
+  "tech_stack": "Next.js + TypeScript + Tailwind CSS",
+  "_fallback_kill_stage": 4,
+  "_fallback_kill_reason": "The fix is knowledge, not software, and it already ships free inside the tool the customer uses. Commenters on the thread itself named it: Stripe SetupIntents with off-session usage (didgeoridoo) and plain Stripe Invoicing with a hosted invoice each time (A_D_E_P_T, TZubiri). The $1-then-$1,500 saved-card pattern is a one-time setup mistake, not a recurring workflow gap. Second structural blocker: the post's own title is that Stripe 'never asked for evidence', so a product that packages authorization evidence (recording, messages, client confirmation) cannot change the outcome, because the processor's risk decision is opaque and final. Three or more well-funded alternatives exist (Stripe Invoicing, GoHighLevel invoicing, QuickBooks Payments, PandaDoc/DocuSign authorization forms) and I cannot articulate a differentiator against them. Also noted: several commenters questioned the legitimacy of the business model itself (Hizonner, JDups, alwa), which weakens the customer.",
+  "_kill_report": "KILLS -- 2026-11-16\n\nTotal candidates evaluated: 25\nKilled: 25  |  Passed to MVP: 0\n\nBy stage:\n  Stage 1 (signal):       20 killed\n  Stage 2 (customer):     3 killed\n  Stage 3 (problem):      1 killed\n  Stage 4 (alternatives): 1 killed\n  Stage 5 (approach):     0 killed\n  Stage 6 (hypothesis):   0 killed\n",
+  "_total_evaluated": 25,
+  "_total_killed": 25,
+  "_fallback": true,
+  "_runners_up": [
+    {
+      "status": "killed",
+      "killed_at_stage": 3,
+      "kill_reason": "Fails the Valuable test: no source I read puts hours, dollars or lost deals on the problem. The strongest pain statement is codedrift_ in the source thread ('This has bitten me so badly SO many times. Every time there's a new model, it's time to re-evaluate the skills'), which is unquantified, and the same commenter says 'Evals saved me', i.e. already solved with existing methods. bisonbear in the same thread: 'Working on my own projects, I don't usually bother.' The Caliper Show HN states the cost only as 'you won't find out until your users complain'. Assigning a number would be fabrication, so kill. Urgency is also missing: the post is a survey question with no deadline, blocked work or money on the line, and the thread's consensus answer is 'tell your agent to do it'. Supporting evidence that Stage 4 would kill it too (not run as a full stage): the platform vendor ships this free and first-party (`claude plugin eval`, with no-plugin baseline, graders and CI gating: https://code.claude.com/docs/en/plugin-evals); HN also lists Anthropic's 'Improving skill-creator: Test, measure, and refine Agent Skills' (item 47240645); and there is a pile of free open-source attempts with almost no traction: Caliper (3 points), Skill Eval (1 point), Skillgrade (1 point), Dynobox (2 points), SkillFortify (2 points), Skillroll (2 points). A GitHub search for 'agent skill eval SKILL.md' returned 43 repos, the top results at 1-4 stars, and one archived repo (1arley/skill-preflight, 0 stars). The only one with traction was Agent-skills-eval (79 points, 37 comments), also free. A free vendor-bundled tool plus many ignored free clones is a structural reason there is no 'pull out card' moment.",
+      "stage_2": {
+        "customer": "Platform / developer-experience engineers who author and maintain shared Claude Code or Codex skills (SKILL.md) used by many engineers in a company monorepo, and who must re-validate those skills at every model release. Narrowed from the thread, not the post itself: bisonbear ('Working in an enterprise monorepo, suddenly the risk of shipping a bad skill is amplified') and codedrift_ (re-evaluates skills at every new model). The post author (enesalatas) gives no details about their own situation. Solo developers are explicitly excluded: the thread says they do not bother.",
+        "where": "Hacker News (Ask HN / Show HN threads on agent skills); GitHub repos tagged agent-skills / claude-code. I did not verify any specific subreddit, Discord or Slack for this customer in this run.",
+        "pays_for": "Not verified in this run. No commenter in the thread mentions paying for any eval tooling; every method or tool named there is free (Claude plugin evals, Microsoft's agent-experience guidance at https://aka.ms/agent-experience, self-built benchmarks, integration tests)."
+      },
+      "stage_3": {
+        "real_posts": [
+          "https://news.ycombinator.com/item?id=48709606",
+          "https://news.ycombinator.com/item?id=48046023",
+          "https://news.ycombinator.com/item?id=47111522",
+          "https://news.ycombinator.com/item?id=48405221"
+        ],
+        "urgent": "FAILED. No deadline, blocked work or money on the line in the source post or thread. The only recurring trigger is a new model release (codedrift_; Caliper author: 'it will quietly break for some part, and you won't find out until your users complain'), and the commenters who hit it already have a fix (own evals, moving skill logic behind a CLI).",
+        "valuable": "FAILED. No hours/week, dollar or lost-deal figure appears in the source thread or the Caliper post, the only two pages read in full; the other related posts were found by title only. The cost is expressed only as annoyance ('bitten me so badly', 'a bit cumbersome', 'pain in the ass'). Real test passed: 4 related posts from different authors, found via HN Algolia queries 'evaluate agent skills SKILL.md', 'skill evals agent', 'test agent skills', 'skill regression new model', 'skills broke new model re-evaluate' (comments, 0 hits) and 'skill benchmark SKILL.md'."
+      },
+      "stage_4": null,
+      "stage_5": null,
+      "stage_6": null,
+      "id": "hn_50426070",
+      "title": "Ask HN: How do you evaluate the skills your AI agents use?",
+      "url": "https://news.ycombinator.com/item?id=50426070",
+      "source": "hackernews",
+      "score": 25,
+      "num_comments": 7
+    },
+    {
+      "status": "killed",
+      "killed_at_stage": 2,
+      "kill_reason": "Stage 2 fails: the post cannot be narrowed to a paying customer without inventing details. The author states no pain, no business context, no revenue, no deadline and no broken workflow \u2014 it is a state-of-the-ecosystem survey question ('what is the state', 'what is your current stack'). The only clues in the post are 'your own server' and 'cheap but reliable VPS providers like Hetzner', which point to a hobbyist/self-hoster optimising for low cost and control, i.e. someone whose stated preference is to avoid paying for a hosted product and to run free open-source software themselves. No urgency or willingness to pay is expressed anywhere in the title or body, and Stage 1 itself flagged this as a borderline pass with 'no explicit pain point'. Turning this into a product customer (e.g. 'small businesses with deliverability problems') would be reframing the post to make it fit, which is a mandated kill. Note on evidence: I attempted to pull the thread's comments from the HN Algolia API to look for further clues about the author; the request returned no data (empty response, timed out), so this verdict rests on the title and body only \u2014 the 33 comments were not read and no Stage 3 searches were run.",
+      "stage_2": null,
+      "stage_3": null,
+      "stage_4": null,
+      "stage_5": null,
+      "stage_6": null,
+      "id": "hn_50488230",
+      "title": "Ask HN: What is the state of self-hosting email in 2026?",
+      "url": "https://news.ycombinator.com/item?id=50488230",
+      "source": "hackernews",
+      "score": 45,
+      "num_comments": 33
+    }
+  ]
+}

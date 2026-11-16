@@ -1,0 +1,11 @@
+PRINCIPLE 1: Loss Aversion
+  Why it fits: A solo agency owner with one client and $1,500 running through a new Stripe account fears the frozen payout and lost client far more than they value any feature, so the loss is what drives the CTA click (no test signal was supplied, so I assumed it is primary-CTA conversion, i.e. email or waitlist signup).
+  How to apply: Make the hero headline the concrete loss in their own numbers, e.g. "3 appointments. One $1,500 invoice. Stripe account closed, no evidence requested.", with a one-line subhead and the CTA directly beneath it; use no countdown timers or invented statistics.
+
+PRINCIPLE 2: Storytelling Effect
+  Why it fits: The target customer is the post author's twin (first client, $500 per appointment, card on file), so a specific story they recognise as their own persuades better than abstract claims about payment risk.
+  How to apply: Directly below the hero, add a 4-step vertical timeline of the real incident (booked 3 appointments → charged the card on file for $1,500 → account closed → never asked for evidence), linked to the original HN thread, ending in one line stating what the product does at the step where it went wrong.
+
+PRINCIPLE 3: Spark Effect
+  Why it fits: An owner-operator running the whole business themselves will abandon anything that looks like onboarding, so the action must cost seconds to produce a measurable signal.
+  How to apply: Make the only CTA a single email field plus one button labelled with the outcome (e.g. "Send me the checklist before my next charge"); no nav links, no secondary CTA, no name, phone or company fields; repeat the identical form once at the page bottom.

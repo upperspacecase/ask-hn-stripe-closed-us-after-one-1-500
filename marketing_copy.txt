@@ -1,0 +1,17 @@
+HOOK: A new Stripe account was closed after one $1,500 charge for 3 booked appointments, so set yours up before you bill your first contractor.
+
+SUBHEADLINE: For pay-per-appointment agencies with fewer than 5 contractor clients: go from charging a card on file and hoping, to a saved-card authorization, an itemized invoice and a paper trail behind every $500 appointment.
+
+VALUE_PROP:
+- Save each contractor's card with a Stripe SetupIntent and a signed per-appointment authorization before the first booking.
+- Bill each batch as a Stripe invoice that lists every appointment by date, instead of one unexplained $1,500 charge.
+- Keep the agreement, booking confirmation and completion record for each appointment in one file, ready whether or not Stripe asks.
+
+CTA: Check my Stripe setup
+
+SECONDARY_CTA: Read the setup checklist
+
+OBJECTIONS:
+- "SetupIntents and Stripe Invoicing are free and already in the docs." Correct, and this uses only those. What you get is the order to do them in for per-appointment billing, without reading the docs to find out they exist.
+- "Can you guarantee Stripe won't close my account?" No. Stripe decides, and nobody outside Stripe can promise that. This replaces the pattern the HN thread pointed at: a large card-on-file charge from a new account with no authorization or invoice behind it.
+- "I already send invoices through GoHighLevel." GoHighLevel sits on top of a processor, so the processor still sees the charge and still makes the call. The authorization and evidence steps apply underneath whatever sends the invoice.
